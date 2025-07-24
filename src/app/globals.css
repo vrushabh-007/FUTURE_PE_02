@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 45 100% 97.5%; /* #FFFCF2 */
+    --foreground: 30 2% 14%; /* #252422 */
+    --card: 45 100% 97.5%;
+    --card-foreground: 30 2% 14%;
+    --popover: 45 100% 97.5%;
+    --popover-foreground: 30 2% 14%;
+    --primary: 30 2% 14%; /* #252422 */
+    --primary-foreground: 45 100% 97.5%; /* #FFFCF2 */
+    --secondary: 40 11% 90%; /* #E5E0DA - derived from #CCC5B9 */
+    --secondary-foreground: 30 2% 14%;
+    --muted: 40 11% 90%;
+    --muted-foreground: 33 3% 40%; /* #716F6C - derived from #403D39 */
+    --accent: 19 83% 54%; /* #EB5E28 */
+    --accent-foreground: 45 100% 97.5%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 40 11% 76%; /* #CCC5B9 */
+    --input: 40 11% 76%;
+    --ring: 30 2% 14%;
+    --radius: 0.5rem;
+    --chart-1: 30 2% 14%;
+    --chart-2: 19 83% 54%;
+    --chart-3: 33 3% 24%;
+    --chart-4: 40 11% 76%;
+    --chart-5: 19 83% 70%;
+  }
+
+  .dark {
+    /* Re-map for a dark version */
+    --background: 30 2% 14%; /* #252422 */
+    --foreground: 45 100% 97.5%; /* #FFFCF2 */
+    --card: 30 2% 14%;
+    --card-foreground: 45 100% 97.5%;
+    --popover: 30 2% 14%;
+    --popover-foreground: 45 100% 97.5%;
+    --primary: 45 100% 97.5%;
+    --primary-foreground: 30 2% 14%;
+    --secondary: 33 3% 24%; /* #403D39 */
+    --secondary-foreground: 45 100% 97.5%;
+    --muted: 33 3% 24%;
+    --muted-foreground: 40 11% 65%; /* derived from #CCC5B9 */
+    --accent: 19 83% 54%; /* #EB5E28 */
+    --accent-foreground: 30 2% 14%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 33 3% 30%; /* Darker border */
+    --input: 33 3% 30%;
+    --ring: 45 100% 97.5%;
+    --chart-1: 45 100% 97.5%;
+    --chart-2: 19 83% 54%;
+    --chart-3: 45 100% 97.5%;
+    --chart-4: 40 11% 76%;
+    --chart-5: 19 83% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  .text-outline {
+    -webkit-text-stroke: 1px hsl(var(--primary));
+    -moz-text-stroke: 1px hsl(var(--primary));
+    color: transparent;
+  }
+  .dark .text-outline {
+    -webkit-text-stroke: 1px hsl(var(--primary));
+    -moz-text-stroke: 1px hsl(var(--primary));
+  }
+}
+
+@layer utilities {
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+  }
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
+  }
+}
