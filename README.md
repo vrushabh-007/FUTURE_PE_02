@@ -7,16 +7,7 @@ A modern, responsive portfolio website built with Next.js, TypeScript, and Tailw
 - **Modern Tech Stack**: Built with Next.js 15, TypeScript, and Tailwind CSS
 - **AI Integration**: Includes AI-powered components for skill suggestions and Q&A
 - **Responsive Design**: Fully responsive layout that works on all devices
-- **Interactive UI**: Rich set of UI components including:
-  - Accordion
-  - Alert Dialog
-  - Avatar
-  - Calendar
-  - Carousel
-  - Charts
-  - Forms
-  - and many more!
-- **3D Elements**: Integration with Three.js for 3D paper plane asset
+- **Interactive UI**
 - **Performance Optimized**: Built with performance best practices
 
 ## 📦 Installation
